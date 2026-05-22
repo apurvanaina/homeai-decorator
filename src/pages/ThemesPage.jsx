@@ -6,7 +6,7 @@ import ThemeCard from '../components/ThemeCard';
 import { THEMES, ROOM_TYPES } from '../data/themes';
 import { ArrowRight, Sparkles, RefreshCw } from 'lucide-react';
 
-const SERVER = 'http://localhost:3001';
+const SERVER = 'https://refactored-potato-rpr9w6w97x93p9v7-3001.app.github.dev';
 
 export default function ThemesPage({ wishlistCount }) {
   const { roomId } = useParams();
@@ -50,6 +50,7 @@ export default function ThemesPage({ wishlistCount }) {
   const generateMoodBoard = async () => {
     if (!selected) return;
     setGenerating(true);
+    
     setMoodBoard(null);
     try {
       const photo = sessionStorage.getItem('roomPhoto');
